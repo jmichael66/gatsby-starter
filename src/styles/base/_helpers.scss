@@ -1,0 +1,23 @@
+// Visibility
+.hidden {
+    @include hidden();
+}
+
+.visually-hidden {
+    @include visually-hidden();
+}
+
+// Alignment
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+
+// To be confirmed (remove on final deployment)
+.tbc {
+    background-color: rgba(red, 0.5);
+}

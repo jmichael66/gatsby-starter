@@ -1,0 +1,35 @@
+html {
+    font-size: 62.5%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $grey-light;
+    color: $default;
+    font-family: $font;
+    font-weight: 400;
+    line-height: 1;
+
+    // Remove the scrollbar and make body overflow hidden when certain classes are applied
+    &.is-video {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    @media screen and ($bp-lg-max) {
+        &.is-navigation {
+            height: 100%;
+            overflow: hidden;
+        }
+    }
+}
+
+
+// Wrapper
+.wrapper {
+    @include font-size();
+    position: relative;
+    overflow: hidden;
+}

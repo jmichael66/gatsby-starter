@@ -1,0 +1,69 @@
+.footer {
+    background-color: $purple-dark;
+    color: $grey-light;
+    @include font-size(14,18);
+    font-weight: 500;
+    padding: 40px 0;
+}
+
+.footer__inner {
+    @media screen and (min-width: 1380px) {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.footer-logo {
+    margin-right: 40px;
+
+    a {
+        display: block;
+    }
+    svg {
+        height: 47px;
+        width: 51px;
+    }
+}
+
+.footer-links {
+    margin-top: 30px;
+
+    @media screen and (min-width: 1380px) {
+        margin-top: 0;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            padding-bottom: 10px;
+
+            @media screen and (min-width: 1380px) {
+                padding-bottom: 0;
+            }
+        }
+
+        li:not(:last-child) {
+            margin-right: 20px;
+
+            @media screen and ($bp-md) {
+                margin-right: 40px;
+            }
+        }
+
+        // Apply link state to the last item
+        li:last-child {
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    a {
+        &:hover, &:focus, &:active {
+            text-decoration: underline;
+        }
+    }
+}

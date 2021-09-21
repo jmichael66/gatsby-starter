@@ -1,0 +1,350 @@
+.navigation {
+    
+    // MOBILE
+    @media screen and ($bp-lg-max) {
+        background-color: $grey-light;
+        padding: 40px 30px;
+        overflow: auto;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        height: calc(100% - 80px);
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform .5s ease;
+
+        // Active
+        .is-navigation & {
+            transform: translateX(0);
+        }
+
+        a {
+            color: $purple-light;
+        }
+
+        svg:last-child {
+            margin-left: 15px;
+            height: 15px;
+            width: 10px;
+            transform: rotate(90deg);
+        }
+
+        // First level
+        > ul {
+            
+            > li {
+                border-bottom: 1px solid rgba(black, 0.2);
+
+                > a {
+                    align-items: center;
+                    display: flex;
+                    @include font-size(24,30);
+                    font-weight: 500;
+                    padding: 20px 0 15px;
+                    justify-content: space-between;
+
+                    // Active
+                    &.is-open {
+                        span {
+                            background-image: linear-gradient(to bottom, transparent calc(100% - 6px), $pink);
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            padding-bottom: 4px;
+                        }
+
+                        & + ul {
+                            max-height: 300px;
+                            transition: max-height .5s ease;
+                        }
+                    }
+                }
+
+
+                // Downloads
+                &:last-child ul li {
+                    a {
+                        align-items: center;
+                        display: flex;
+                    }
+
+                    svg {
+                        height: 19px;
+                        width: 20px;
+                        margin-right: 10px;
+                        position: relative;
+                        top: -1px;
+                    }
+                }
+
+            }
+        }
+
+        // Second level
+        ul > li > ul {
+            max-height: 0;
+            overflow: hidden;
+            
+            > li {
+                padding-bottom: 10px;
+
+                &:last-child {
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
+    @media screen and ($bp-md-max) {
+        padding: 40px 20px;
+    }
+
+
+    // DESKTOP
+    @media screen and ($bp-lg) {
+        display: block;
+
+        svg {
+            display: none;
+        }
+
+        // First level
+        > ul {
+            display: flex;
+
+            > li {
+                position: relative;
+
+                > a {
+                    color: $purple-dark;
+                    display: block;
+
+                    span {
+                        display: block;
+                        position: relative;
+                        padding: 10px 0;
+                        overflow: hidden;
+
+                        &:after {
+                            background-color: $pink;
+                            content: "";
+                            height: 4px;
+                            width: 100%;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            transform: translateY(100%);
+                            transition: transform .25s ease;
+                            will-change: transform;
+                        }
+                    }
+                    
+                    &:hover, &:focus, &:active, &.is-active {
+                        span:after {
+                            transform: translateY(0);
+                        }
+                    }
+
+                    // Remove the overview option on Desktop
+                    &.has-children + ul li:first-child {
+                        display: none;
+                    }
+
+                }
+
+                &:hover {
+                    > a > span:after {
+                        transform: translateY(0);
+                    }
+
+                    & > ul {
+                        display: block;
+                    }
+                }
+
+
+                // Hide the Downloads
+                &:last-child {
+                    display: none;
+                }
+            }
+
+            > li:not(:last-child) {
+                margin-right: 25px;
+            }
+        }
+
+        // Second level
+        ul > li > ul {
+            background-color: $purple-light;
+            box-shadow: 1px 1px 4px 0px rgba(black, 0.4);
+            color: white;
+            display: none;
+            @include font-size(12,18);
+            padding: 10px;
+            min-width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translateY(100%);
+
+            > li {
+                > a {
+                    display: block;
+                    padding: 3px 10px 3px 0;
+                    white-space: nowrap;
+
+                    &:hover, &:focus, &:active {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Toggle
+.navigation-toggle {
+    @media screen and ($bp-lg) {
+        display: none;    
+    }
+
+    color: $purple-light;
+
+    svg {
+        height: 25px;
+        width: 25px;
+
+        &:last-child {
+            display: none;
+        }
+    }
+
+    &:hover, &:focus, &:active {
+        color: $purple-dark;
+    }
+
+}
+.is-navigation .navigation-toggle {
+    svg:first-child {display: none;}
+    svg:last-child {display: block;}
+}
+
+
+// Downloads
+.navigation-downloads {
+    display: none;
+
+    @media screen and ($bp-lg) {
+        display: block;
+        margin-left: 5px;
+        position: relative;
+        z-index: 1;
+
+        button {
+            @include font-size(14,18);
+            padding: 15px 20px 13px;
+
+            span {
+                padding: 0 10px;
+            }
+
+            svg {
+                margin: 0;
+            }
+
+            svg:last-child {
+                height: 10px;
+                flex: 0 0 15px;
+                max-width: 15px;
+                transform: rotate(90deg);
+                transition: transform .25s ease;
+            }
+
+            &.is-active {
+                svg:last-child {
+                    transform: rotate(-90deg);
+                }
+
+                & + ul {
+                    display: block;
+                }
+            }
+        }
+
+        ul {
+            background-color: $grey-light;
+            box-shadow: 0 0 4px 0 rgba(127,127,127,0.5);
+            display: none;
+            @include font-size(12,18);
+            padding-top: 25px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            min-width: 100%;
+            transform: translateY(calc(100% - 25px));
+            z-index: -1;
+
+            @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+                transform: translateY(100%) translateY(-25px);
+            }
+            
+
+            li {
+                border-bottom: 1px solid $grey-light;
+                white-space: nowrap;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                a {
+                    align-items: center; 
+                    display: flex;
+                    padding: 10px;
+
+                    &:hover, &:focus, &:active {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            svg {
+                color: $purple-light;
+                height: 19px;
+                flex: 0 0 20px;
+                max-width: 20px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+
+// Quick
+.navigation__quick {
+    margin-top: 20px;
+
+    a {
+        align-items: center;
+        color: $default;
+        display: flex;
+        padding: 10px 0;
+
+        &:hover, &:focus, &:active {
+            span {
+                background-image: linear-gradient(to bottom, transparent calc(100% - 2px), currentColor);
+                background-repeat: no-repeat;
+            }
+        }
+
+        svg:last-child {
+            height: 16px;
+            width: 16px;
+            margin-left: 10px;
+            transform: rotate(0);
+        }
+    }
+
+    @media screen and ($bp-lg) {
+        display: none;
+    }
+}

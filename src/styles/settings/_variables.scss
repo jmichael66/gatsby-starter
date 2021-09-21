@@ -1,0 +1,27 @@
+// Colours
+$default: #000;
+
+$purple-dark: #A0C4FF;
+$purple-light:#BDB2FF;
+$grey-light: #FFFFFC;
+$pink: #FFC6FF;
+
+// Fonts
+$font: "Arial", "sans-serif";
+
+$base-font-size: 16;
+$base-line-height: 24;
+
+
+// Breakpoints
+$bp-sm: "min-width: 480px";
+    $bp-sm-max: "max-width: 479px";
+
+$bp-md: "min-width: 768px";
+    $bp-md-max: "max-width: 767px";
+
+$bp-lg: "min-width: 1260px";
+    $bp-lg-max: "max-width: 1259px";
+
+$bp-full: "min-width: 1440px";
+    $bp-full-max: "min-width: 1440px";
