@@ -12,4 +12,9 @@
 @import 'layout/navigation';
 @import 'layout/footer';
 
-@import 'components/page-header';
+@import 'modules/page-header';
+@import 'modules/highlights';
+@import 'modules/page-promo';
+
+@import 'components/fact';
+@import 'components/button';

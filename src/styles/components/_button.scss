@@ -1,0 +1,40 @@
+.button {
+    background-color: $purple-light;
+    color: white;
+    border: 1px solid white;
+    border-radius: 23px;
+    align-items: center;
+    display: inline-block;
+    @include font-size(16,45);
+    font-weight: 500;
+    height: 45px;
+    padding: 0 30px;
+
+    // White background
+    &--white {
+        background-color: white;
+        color: $purple-light;
+        border-color: $purple-light;
+    }
+
+    // Downloads
+    &--download {
+        align-items: center;
+        display: inline-flex;
+
+        svg {
+            height: 19px;
+            flex: 0 0 20px;
+            max-width: 20px;
+            margin-right: 10px;
+            position: relative;
+            top: -2px;
+        }
+    }
+
+    &:hover, &:focus, &:active {
+        background-color: $pink;
+        border-color: $pink;
+        color: $purple-light;
+    }
+}

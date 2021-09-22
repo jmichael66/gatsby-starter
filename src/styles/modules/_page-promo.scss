@@ -1,0 +1,21 @@
+.page-promo {
+    background-color: $purple-light;
+    color: white;
+    padding: 40px 0;
+
+    @media screen and ($bp-lg) {
+        padding: 80px 0;
+    }
+
+    .row {
+        align-items: center;
+    }
+}
+
+.page-promo__title {
+    margin-bottom: 40px;
+}
+
+.page-promo__content {
+    margin-top: 30px;
+}

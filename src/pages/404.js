@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../modules/Layout'
+import Layout from '../template/Layout'
 
 export default function NotFound() {
     return (

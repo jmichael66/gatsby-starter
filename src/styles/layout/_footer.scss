@@ -20,9 +20,9 @@
     a {
         display: block;
     }
-    svg {
+    img {
         height: 47px;
-        width: 51px;
+        filter: brightness(0) invert(1);
     }
 }
 

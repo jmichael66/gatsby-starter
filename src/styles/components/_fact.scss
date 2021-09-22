@@ -1,0 +1,42 @@
+.facts-grid {
+    @media screen and ($bp-sm) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.fact {
+    margin-top: 40px;
+    width: 100%;
+
+    @media screen and ($bp-sm) {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-top: 80px;
+    }
+
+    p {
+        @include font-size(12,18);
+        margin-top: 5px;
+    }
+}
+
+.fact__label {
+    @include font-size(14,18);
+    margin-bottom: 10px;
+}
+
+.fact__value {
+    @include font-size(44,48);
+    letter-spacing: -2px;
+
+    @media screen and ($bp-sm-max), ($bp-md) {
+        @include font-size(55,55);
+    }
+}
+
+.fact__change {
+    color: $pink;
+    font-weight: 500;
+    @include font-size(24,28);
+}

@@ -1,0 +1,51 @@
+.highlights {
+    padding: 80px 0;
+}
+
+.highlights__title {
+    color: $purple-light;
+
+    .button {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    @media screen and ($bp-md) {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.highlights__main {
+    .fact {
+
+        @media screen and ($bp-lg) {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+    }
+    .fact__value {
+        color: $purple-light;
+    }
+    .fact__change {
+        color: $purple-dark;
+    }
+}
+
+.highlights__footer {
+    @include font-size(12,16);
+    margin-top: 40px;
+
+    p {
+        max-width: 760px;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
