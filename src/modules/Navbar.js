@@ -29,68 +29,39 @@ export default function Navbar() {
                             <div class="navigation" data-navigation>
                                 <ul>
                                     <li>
-                                        <a class="has-children" href="/highlights-and-statements/">
+                                        <Link class="has-children" to={"/reports/highlights-and-statements"}>
                                             <div>
                                                 <span>Highlights and statements</span>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a class="has-children" href="/our-business/">
+                                        <Link class="has-children" to={"/reports/our-business"}>
                                             <div>
                                                 <span>Our business</span>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a class="has-children" href="/esg-report/">
+                                        <Link class="has-children" to={"/reports/esg-report/"}>
                                             <div>
                                                 <span>ESG Report</span>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="/governance-report/">
+                                        <Link class="has-children" to={"/reports/governance-report/"}>
                                             <div>
                                                 <span>Governance report</span>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="/financial-statements/">
+                                        <Link class="has-children" to={"/reports/financial-statements/"}>
                                             <div>
                                                 <span>Financial statements</span>
                                             </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="has-children" href="/#downloads">
-                                            <div>
-                                                <span>Downloads</span>
-                                            </div>
-                                        </a>
-                                        <ul>
-                                            <li>
-                                                <a href="#" target="_blank">
-                                                    <span>Annual report 2020</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" target="_blank">
-                                                    <span>Strategic report</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" target="_blank">
-                                                    <span>Governanace</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" target="_blank">
-                                                    <span>Financial statements</span>
-                                                </a>
-                                            </li>
-                                        </ul>
+                                        </Link>
                                     </li>
                                 </ul>
 

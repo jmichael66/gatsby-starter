@@ -13,7 +13,7 @@ export default function Footer() {
                     </div>
                     <div class="footer-links">
                         <ul>
-                            <li>&copy; Gamma 2021</li>
+                            <li>&copy; Pastel 2021</li>
                             <li><a href="/company-information/">Contact &amp; Company information</a></li>
                             <li><a href="https://www.gammacommunicationsplc.com/terms-and-conditions/" target="_blank" rel="noopener">Terms and conditions</a></li>
                             <li><a href="https://www.gammacommunicationsplc.com/cookie-policy/" target="_blank" rel="noopener">Privacy &amp; Cookie policy</a></li>

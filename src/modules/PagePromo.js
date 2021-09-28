@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
 export default function PagePromo() {
@@ -23,7 +24,7 @@ export default function PagePromo() {
                             <div class="page-promo__content" data-reveal-sub>
                                 <p class="standfirst">Pastel takes its responsibilities towards the environment seriously.<br />We are committed to social responsibility and embed this into our policies and practices.<br/> We believe that sound corporate governance is essential.</p>
                                 <div>
-                                    <a class="button" href="/esg-report/">View ESG report</a>
+                                    <Link class="button" to={"/reports/esg-report/"}>View ESG report</Link>
                                 </div>
                             </div>
                         </div>

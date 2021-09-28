@@ -7,7 +7,7 @@ export default function PageHeader() {
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="page-header__title" data-reveal-sub>
-                            <h1 class="h1">Welcome to the Homepage.</h1>
+                            <h1 class="h1">Annual Report 2021</h1>
                         </div>
                     </div>
                 </div>

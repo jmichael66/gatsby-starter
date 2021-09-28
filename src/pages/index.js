@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../template/Layout"
+import Layout from "../modules/Layout"
 import PageHeader from '../modules/PageHeader'
 import Highlights from '../modules/Highlights'
 import PagePromo from '../modules/PagePromo'

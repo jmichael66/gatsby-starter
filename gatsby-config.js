@@ -15,8 +15,8 @@
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `projects`,
-        path: `${__dirname}/src/assets/projects/`,
+        name: `Reports`,
+        path: `${__dirname}/src/assets/Reports/`,
       },
     },
     {

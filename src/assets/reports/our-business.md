@@ -1,7 +1,7 @@
 ---
-title: Real Kitchen Food
+title: Our Business
 stack: Gatsby & Shopify
-slug: real-kitchen-food
+slug: our-business
 date: 2021-02-01
 thumb: ../images/thumbs/food.png
 featuredImg: ../images/featured/food-banner.png

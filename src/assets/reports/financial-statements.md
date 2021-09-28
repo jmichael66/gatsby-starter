@@ -1,7 +1,7 @@
 ---
-title: The Drum Stop
+title: Financial Statements
 stack: Next.js
-slug: the-drum-stop
+slug: financial-statements
 date: 2021-05-01
 thumb: ../images/thumbs/drums.png
 featuredImg: ../images/featured/drums-banner.png
